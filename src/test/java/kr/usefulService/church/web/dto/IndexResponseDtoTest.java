@@ -15,6 +15,6 @@ public class IndexResponseDtoTest {
         IndexResponseDto dto = new IndexResponseDto(name,amount);
         dto.getName();
         //then
-        assertThat(dto.getName()).isEqulTo(name);
+        assertThat(dto.getName()).isEqualTo(name);
     }
 }

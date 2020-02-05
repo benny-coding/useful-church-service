@@ -1,5 +1,6 @@
 package kr.usefulService.church.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,11 +16,18 @@ public class Bible {
     private Long index;
 
     @Column(length = 2, nullable = false)
-    private int type;
+    private String type;
 
     @Column(length = 10, nullable = false)
     private String content;
 
     @Column
     private int chapter;
+
+    @Builder
+    public Bible(String type, String content, int chapter) {
+        this.type = type;
+        this.content = content;
+        this.chapter = chapter;
+    }
 }
