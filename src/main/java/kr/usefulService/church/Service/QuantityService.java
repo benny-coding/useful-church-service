@@ -10,9 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class QuantityService {
     private final QuantityRepository quantityRepository;
-
+/*
     @Transactional
     public void select(QuantitySelectRequestDto requestDto){
         return quantityRepository.findAll(requestDto.toEntity());
     }
+    */
 }
+
