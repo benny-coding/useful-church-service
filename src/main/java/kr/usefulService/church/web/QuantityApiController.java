@@ -1,10 +1,6 @@
 package kr.usefulService.church.web;
 
-import kr.usefulService.church.Service.QuantityService;
-import kr.usefulService.church.domain.Quantity;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
