@@ -18,7 +18,7 @@ public class Quantity {
     @Column(length = 2, nullable = false)
     private int leapYear;
 
-    @Column(name = "DATE_FIELD")
+    @Column
     private java.sql.Date date;
 
     @Column(length = 50, nullable = false)
