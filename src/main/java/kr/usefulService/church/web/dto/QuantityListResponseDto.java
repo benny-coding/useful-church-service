@@ -9,7 +9,7 @@ public class QuantityListResponseDto {
     private Long index;
     private int leapYear;
     private java.sql.Date date;
-    private int purpose;
+    private String purpose;
     private String content;
     private int totalCount;
 
