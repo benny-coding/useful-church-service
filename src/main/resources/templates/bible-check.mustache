@@ -1,126 +1,46 @@
 {{>layout/header}}
 
 <h2 class="text-center" style="margin-top:20px" >1독방 읽은 성경 수 체크 </h2>
-<div class="container">
+<div class="container text-center" style="width:338px">
     <div class="row">
         <div class="col">
-            <h2 class="text-center" style="margin-top:20px" >2월</h2>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-danger">
-                    <input type="checkbox" disabled>일
-                </label>
-                <label class="btn btn-success">
-                    <input type="checkbox" disabled>월
-                </label>
-                <label class="btn btn-success">
-                    <input type="checkbox" disabled>화
-                </label>
-                <label class="btn btn-success">
-                    <input type="checkbox" disabled>수
-                </label>
-                <label class="btn btn-success">
-                    <input type="checkbox" disabled>목
-                </label>
-                <label class="btn btn-success">
-                    <input type="checkbox" disabled>금
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" disabled>토
-                </label>
-            </div>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-outline-danger">
-                    <input type="checkbox">1
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">2
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">3
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">4
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">5
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">6
-                </label>
-                <label class="btn btn-outline-primary">
-                    <input type="checkbox">7
-                </label>
-            </div>
-
-            <div class="btn-group-toggle" data-toggle="buttons" style="margin-top:5px">
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">1
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">2
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">3
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">4
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">5
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">6
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">7
-                </label>
-            </div>
-            <div class="btn-group-toggle" data-toggle="buttons" style="margin-top:4px">
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">1
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">2
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">3
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">4
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">5
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">6
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">7
-                </label>
-            </div>
-            <div class="btn-group-toggle" data-toggle="buttons" style="margin-top:4px">
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">1
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">2
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">3
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">4
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">5
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">6
-                </label>
-                <label class="btn btn-outline-success">
-                    <input type="checkbox">7
-                </label>
+            <input type="text" value="총 0장을 읽었습니다!" style="border:0px; text-align:center; margin-top:15px" id="totalCountValue" disabled="">
+        </div>
+    </div>
+    <div class="row" style="font-size:20px
+">
+        <div class="col">
+            <input type="text" value="0월" class="btn btn-outline-dark" style="width:305px;margin-top:15px;" id="thisMonth" disabled="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-left" id="calendar">
+            <div class="btn-group-toggle" data-toggle="buttons" id="">
+            <label class="btn btn-danger">
+                <input type="checkbox" disabled="">일
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox" disabled="">월
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox" disabled="">화
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox" disabled="">수
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox" disabled="">목
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox" disabled="">금
+            </label>
+            <label class="btn btn-primary">
+                <input type="checkbox" disabled="">토
+            </label>
             </div>
         </div>
     </div>
+    <!--quantityCheck.js 추가-->
+
+</div>
 {{>layout/footer}}

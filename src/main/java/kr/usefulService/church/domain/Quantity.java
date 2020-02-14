@@ -21,8 +21,8 @@ public class Quantity {
     @Column(name = "DATE_FIELD")
     private java.sql.Date date;
 
-    @Column(length = 3, nullable = false)
-    private int purpose;
+    @Column(length = 50, nullable = false)
+    private String purpose;
 
     @Column(length = 20, nullable = false)
     private String content;
@@ -31,7 +31,7 @@ public class Quantity {
     private int totalCount;
 
     @Builder
-    public Quantity(int leapYear, java.sql.Date date, int purpose, String content, int totalCount){
+    public Quantity(int leapYear, java.sql.Date date, String purpose, String content, int totalCount){
         this.leapYear = leapYear;
         this.date = date;
         this.purpose = purpose;
