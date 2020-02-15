@@ -20,5 +20,8 @@ public class QuantityListResponseDto {
         this.purpose = entity.getPurpose();
         this.content = entity.getContent();
         this.totalCount = entity.getTotalCount();
+
+
+
     }
 }
