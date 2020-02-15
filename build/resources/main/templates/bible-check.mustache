@@ -1,13 +1,14 @@
 {{>layout/header}}
 
-<div class="container text-center" style="width:338px">
-<input type="text" style="border:0px; text-align:center; margin-top:15px; font-size: x-large;" id="title" disabled>
+<div class="container text-left" style="width:338px">
+    <button type="button" style="border:0; background:white; width:30px; height:30px;" onclick='history.back()'><img src="/back-button.png" style="padding-bottom:9px"></button>
+    <input type="text" style="border:0px; text-align:center; margin-top:15px; font-size: x-large; color:black; background: white;" id="title" disabled>
 </div>
 <div class="container text-center" style="width:338px">
     <div class="row">
         <div class="col">
             <input type="text" value="총 0장을 읽었습니다!"
-                   style="border:0px; text-align:center; margin-top:15px; font-size: x-large;" id="totalCountValue" disabled>
+                   style="border:0px; text-align:center; margin-top:15px; font-size: x-large; color:black; background: white;" id="totalCountValue" disabled>
         </div>
     </div>
     <div class="row" style="font-size:20px
@@ -19,27 +20,27 @@
     <div class="row">
         <div class="col text-left" id="calendar">
             <div class="btn-group-toggle" data-toggle="buttons" id="">
-            <label class="btn btn-danger">
-                <input type="checkbox" disabled="">일
-            </label>
-            <label class="btn btn-success">
-                <input type="checkbox" disabled="">월
-            </label>
-            <label class="btn btn-success">
-                <input type="checkbox" disabled="">화
-            </label>
-            <label class="btn btn-success">
-                <input type="checkbox" disabled="">수
-            </label>
-            <label class="btn btn-success">
-                <input type="checkbox" disabled="">목
-            </label>
-            <label class="btn btn-success">
-                <input type="checkbox" disabled="">금
-            </label>
-            <label class="btn btn-primary">
-                <input type="checkbox" disabled="">토
-            </label>
+                <label class="btn btn-danger">
+                    <input type="checkbox" disabled="">일
+                </label>
+                <label class="btn btn-success">
+                    <input type="checkbox" disabled="">월
+                </label>
+                <label class="btn btn-success">
+                    <input type="checkbox" disabled="">화
+                </label>
+                <label class="btn btn-success">
+                    <input type="checkbox" disabled="">수
+                </label>
+                <label class="btn btn-success">
+                    <input type="checkbox" disabled="">목
+                </label>
+                <label class="btn btn-success">
+                    <input type="checkbox" disabled="">금
+                </label>
+                <label class="btn btn-primary">
+                    <input type="checkbox" disabled="">토
+                </label>
             </div>
         </div>
     </div>
