@@ -15,8 +15,11 @@ public class QuantityService {
     private final QuantityRepository quantityRepository;
 
     @Transactional(readOnly = true)
-    public List<QuantityListResponseDto> findThisMonthASC() {
-        return quantityRepository.findThisMonthASC().stream()
+    public List<QuantityListResponseDto> findThisMonthASC(String purpose) {
+        System.out.println("Service : " + quantityRepository.findThisMonthASC(purpose).stream()
+                .map(QuantityListResponseDto::new)
+                .collect(Collectors.toList()));
+        return quantityRepository.findThisMonthASC(purpose).stream()
                 .map(QuantityListResponseDto::new)
                 .collect(Collectors.toList());
     }

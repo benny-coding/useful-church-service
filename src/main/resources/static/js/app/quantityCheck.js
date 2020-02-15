@@ -1,3 +1,7 @@
+var url = new URL(window.location.href);
+var purpose = url.searchParams.get("purpose");
+$("#title")[0].value = purpose + "독방 읽은 성경 수 체크";
+
 var today = new Date();
 
 var year = today.getFullYear();
@@ -16,7 +20,7 @@ var main = {
 
     $.ajax({
       type: "GET",
-      url: "/api/quantity",
+      url: "/api/quantity/" + purpose,
       dataType: "json",
       contentType: "application/json; charset=utf-8",
       data: JSON
@@ -34,7 +38,7 @@ var main = {
         }
         _this.drawCalendar();
       })
-      .fail(function() {
+      .fail(function(error) {
         alert(JSON.stringify(error));
       });
   },
