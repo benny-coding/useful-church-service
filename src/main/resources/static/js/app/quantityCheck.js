@@ -37,6 +37,9 @@ var main = {
           if (i % 7 == 6 || i == day + data.length - 1) _this.lastLine();
         }
         _this.drawCalendar();
+        $(document).ready(function() {
+          _this.lastWeekCheck();
+        });
       })
       .fail(function(error) {
         alert(JSON.stringify(error));
@@ -51,13 +54,28 @@ var main = {
   addCalendar: function(totalReadingCount) {
     if (i % 7 == 0) {
       contents +=
-        "<label class='btn btn-outline-danger' style='margin-right:4px' onclick='main.checkCalendar(this)'>";
+        "<label class='btn btn-outline-danger' style='margin-right:4px' onclick='main.checkCalendar(this)'" +
+        " id='" +
+        month +
+        "day" +
+        (i - day + 1) +
+        "' >";
     } else if (i % 7 == 6) {
       contents +=
-        "<label class='btn btn-outline-primary' style='margin-right:4px' onclick='main.checkCalendar(this)'>";
+        "<label class='btn btn-outline-primary' style='margin-right:4px' onclick='main.checkCalendar(this)'" +
+        " id='" +
+        month +
+        "day" +
+        (i - day + 1) +
+        "' >";
     } else {
       contents +=
-        "<label class='btn btn-outline-success' style='margin-right:4px' onclick='main.checkCalendar(this)'>";
+        "<label class='btn btn-outline-success' style='margin-right:4px' onclick='main.checkCalendar(this)'" +
+        " id='" +
+        month +
+        "day" +
+        (i - day + 1) +
+        "' >";
     }
     contents +=
       "<input type='checkbox' value='" +
@@ -69,7 +87,6 @@ var main = {
   },
   changeLine: function() {
     contents += "<div class='btn-group-toggle' data-toggle='buttons'>";
-    //alert(i);
   },
   lastLine: function() {
     contents += "</div>";
@@ -86,28 +103,15 @@ var main = {
       totalCount -= Number(checkbox.value);
       $("#totalCountValue")[0].value = "총 " + totalCount + "장 읽었습니다!";
     }
-    //alert(thisDay.className);
+  },
+  lastWeekCheck: function() {
+    for (var j = 0; j < 6; j += 1) {
+      $("#" + month + "day" + (date - j)).click();
+      //alert("#" + month + "day" + (date - j));
+    }
   }
 };
 
-// # 요일 계산
-/*
-day = day == 0 ? "일" : day;
-day = day == 1 ? "월" : day;
-day = day == 2 ? "화" : day;
-day = day == 3 ? "수" : day;
-day = day == 4 ? "목" : day;
-day = day == 5 ? "금" : day;
-day = day == 6 ? "토" : day;
-*/
-//alert(year + "년 " + month + "월 " + "1일은 " + day + "요일 ");
-
-/*
-contents +=
-  "<label class='btn btn-outline-danger' onclick='dayCheck()'>" +
-  "<input type='checkbox' id='day' style='display:none' >1" +
-  "</label>";
-*/
 function dayCheck() {
   totalCount += 1;
   document.getElementById("totalCountValue").value =
